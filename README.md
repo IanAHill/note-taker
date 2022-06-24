@@ -8,4 +8,4 @@ This app allows users to create and save notes. The app makes API calls to retri
 
 
 
-[Note Taker App link:](https://ianahill.github.io/Weather-Forecast-App/)
+[Note Taker App link:](https://us02web.zoom.us/j/3241412002)
