@@ -1,32 +1,21 @@
 const notes = require('express').Router();
-const { readFromFile, readAndAppend } = require('../utils/util');
-const { router } = require('./apiRoutes');
 
-//create a get route to "/notes.html" 
-
-//create a get route to "/index.html"
+const path = require('path');
 
 
-
-notes.get('/', (req, res) => {
-  // Make this go to index.html
-    console.log("Yay!!")
-    // readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
-  });
-
-
-router.get('/notes', (req, res) => {
-// Make this go to notes.html! 
-  })
-
-
-router.get("*", (req, res) => {
-  // Make this go to index.html!
+notes.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/index.html'));
+  console.log(__dirname);
 })
-//notes.post
 
-//notes.delete
-  
+notes.get("/notes", (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/notes.html'));
+})
+
+notes.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/index.html'));
+  console.log(__dirname);
+})
   
   
   module.exports = notes;
