@@ -1,5 +1,5 @@
 const express = require('express');
-const api = require('./routes/apiroutes.js');
+const api = require('./routes/apiRoutes.js');
 const htmlRoutes = require("./routes/htmlRoutes.js");
   
 
